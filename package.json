@@ -5,26 +5,23 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "keygen:path:windows": "PATH=$PATH:/c/Program\\ Files/Android/Android\\ Studio/jre/bin/",
+    "keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias pawket_release -keyalg RSA -keysize 2048 -validity 10000",
+    "run:android": "cordova run android --device",
+    "build:release": "cordova platform update android && cordova build android --release -- --keystore=my-release-key.keystore --alias=pawket_release --storePassword=pawket --password=pawket"
   },
   "keywords": [
     "ecosystem:cordova"
   ],
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "cordova-android": "^10.1.1",
-    "cordova-plugin-camera": "git+https://github.com/apache/cordova-plugin-camera.git"
-  },
   "cordova": {
     "platforms": [
       "android"
     ],
-    "plugins": {
-      "cordova-plugin-camera": {
-        "ANDROIDX_CORE_VERSION": "1.6.+"
-      }
-    }
+    "plugins": {}
   },
-  "dependencies": {}
+  "devDependencies": {
+    "cordova-android": "^10.1.2"
+  }
 }
