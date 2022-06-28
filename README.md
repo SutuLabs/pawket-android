@@ -87,4 +87,4 @@ cordova run android --emulator
 2. Replace files in `www\` with latest package download from [Azure Devops Pipelines](https://dev.azure.com/sututech/Chia/_build?definitionId=43&_a=summary).
 3. Build release with `yarn build:release`.
 4. Upload aab package to [Google Play Console](https://play.google.com/console/u/0/developers/4723266972324399816/app/4972761195466309737/tracks/4701725921608018730/releases/1/prepare)
-5. Download `Signed, universal API` from app bundle.
+5. Download `Signed, universal APK` from app bundle.
