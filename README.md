@@ -47,13 +47,21 @@ brew install gradle
 2. Set the ANDROID_SDK_ROOT environment variable to the location of your Android SDK installation
 3. It is also recommended that you add the Android SDK's tools, emulator and platform-tools directories to your PATH
 
-```bash:
+```sh
 export JAVA_HOME=<java-location>
 export ANDROID_SDK_ROOT=<sdk-location>
+export ANDROID_HOME=<sdk-location>
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator/
 ```
+
+
+```sh
+export ANDROID_SDK_ROOT=/c/Users/icer/AppData/Local/Android/Sdk
+export ANDROID_HOME=/c/Users/icer/AppData/Local/Android/Sdk
+```
+
 # Check
 In the cordova project directory, run
 ```
@@ -88,3 +96,20 @@ cordova run android --emulator
 3. Build release with `yarn build:release`.
 4. Upload aab package to [Google Play Console](https://play.google.com/console/u/0/developers/4723266972324399816/app/4972761195466309737/tracks/4701725921608018730/releases/1/prepare)
 5. Download `Signed, universal APK` from app bundle.
+
+# Upgrade API version
+
+`config.xml`
+```xml
+    <preference name="android-targetSdkVersion" value="33" />
+```
+
+```sh
+cordova platform remove android
+cordova platform add android
+cordova build android
+sdkmanager.bat "platforms;android-33"
+sdkmanager.bat "build-tools;33.0.0"
+cordova requirements
+yarn build:release
+```
