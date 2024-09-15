@@ -102,15 +102,20 @@ cordova run android --emulator
 
 `config.xml`
 ```xml
-    <preference name="android-targetSdkVersion" value="33" />
+    <preference name="android-targetSdkVersion" value="35" />
 ```
 
 ```sh
 cordova platform remove android
 cordova platform add android
-cordova build android
-sdkmanager.bat "platforms;android-33"
-sdkmanager.bat "build-tools;33.0.0"
+sdkmanager.bat "platforms;android-35"
+sdkmanager.bat "build-tools;35.0.0"
 cordova requirements
 yarn build:release
 ```
+
+# FAQ
+
+**Q:** How do I fix the “Unsupported class file major version 66” error when compiling Android with Cordova?
+
+**A:** This is caused by using a Java version that's too high; downgrading to Java 17 will resolve the issue.
