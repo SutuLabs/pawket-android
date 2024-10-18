@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.pawket.wallet" version="1.6.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.pawket.wallet" version="1.6.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Pawket</name>
     <icon src="res/android/icon.png" platform="android" width="57" height="57" density="mdpi" />
     <description>An open-source and secure offline wallet for Chia</description>
@@ -18,5 +18,6 @@
             <uses-feature android:name="android.hardware.camera.autofocus"/>
             <uses-permission android:name="android.permission.CAMERA"/>
         </config-file>
+        <resource-file src="res/android/pawket_splashscreen.xml" target="app/src/main/res/drawable/ic_cdv_splashscreen.xml" />
     </platform>
 </widget>
