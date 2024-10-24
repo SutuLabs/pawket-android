@@ -97,6 +97,7 @@ cordova run android --emulator
 4. Upload aab package to [Google Play Console](https://play.google.com/console/u/0/developers/6182797017495156447/app/4973812058919766560/tracks/production)
   - Production -> Create Release -> Upload
 5. Download `Signed, universal APK` from app bundle.
+6. Remember to upload latest APK to github release.
 
 # Upgrade API version
 
